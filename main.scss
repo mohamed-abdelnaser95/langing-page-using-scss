@@ -1,0 +1,156 @@
+$main-color: wheat;
+$primary-font-color: #444;
+$secondary-font-color: #777;
+
+.active{
+    display: none;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+
+body{
+    background-color: $main-color;
+}
+
+header{
+    color: $secondary-font-color;
+    background-color: white;
+    position: relative;
+
+    .icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        justify-content: space-between;
+        cursor: pointer;
+        display: none   ;
+
+        span{
+            background-color: white;
+            width: 100%;
+            height: 5px;
+            border-radius: 2px;
+        }
+    }
+
+    .logo{
+        span{
+        margin-left: 10px;
+        }
+    } 
+
+    nav{
+        ul{
+            display: flex;
+            list-style: none;
+        
+            li {
+                margin-right: 10px;
+                cursor: pointer;
+                padding: 5px;
+            }
+        }
+        
+    }
+}
+
+// Media Query
+// -------------
+@media (max-width: 600px) {
+    header {
+
+        ul{
+            flex-direction: column;
+            padding-left: 0;
+            position: absolute;
+            top: 40px;
+            width: 100%;
+            text-align: center;
+            background-color: #000000b3;
+
+            li{
+                margin-top: 5px;
+                color: $main-color;
+            }
+        }
+
+        .icon{
+            display: flex;
+        }
+
+        nav{
+            position: absolute;
+            top: 17px;
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+// ------------------------------------
+
+.landing{
+    background-color: #f5deb3;
+
+    img{
+        width: 200px;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .text{
+        width: 500px;
+        margin-left: 15px;
+        line-height: 1.8;
+    }
+}
+// MediaQuer
+// -----------
+@media (max-width:600px) {
+    .landing {
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .text{
+                width: 100%;
+            }
+        }
+
+        
+    }
+}
+// ------------------------------------------
+.services{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    .text{
+        text-align: center;
+    }
+
+    .container svg{
+        font-size: 35px;
+        margin: 10px auto;
+    }
+    
+    .col .card-text {
+        color: $secondary-font-color ;
+    }
+}
+
+
